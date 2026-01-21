@@ -1,0 +1,40 @@
+.navbar {
+  position: fixed;        /* 🔥 상단 고정 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 40px;
+  background-color: #ffffff;
+
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 1000;
+}
+
+
+
+/* 메뉴 */
+.navbar-menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin-left: auto;
+  padding: 0;
+}
+
+.navbar-menu a {
+  color: #111111 !important;   /* 🔥 최종 덮어쓰기 */
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.navbar-menu a:hover {
+  color: #2563eb !important;
+}
+

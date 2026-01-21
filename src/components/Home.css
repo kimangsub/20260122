@@ -1,0 +1,22 @@
+.hero-btn {
+  display: inline-block;
+
+  padding: 10px 24px;   /* ⬅️ 줄임 */
+  margin-top: 20px;
+
+  background-color: #2563eb;
+  color: #ffffff;
+
+  font-size: 14px;      /* ⬅️ 살짝 작게 */
+  font-weight: 600;
+
+  border-radius: 5px;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.hero-btn:hover {
+  background-color: #1e40af;
+}
