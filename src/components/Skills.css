@@ -1,0 +1,159 @@
+/* src/components/Skills.css */
+
+/* 🔥 네비 클릭 시 위치 보정 */
+#skills {
+  scroll-margin-top: 80px; /* 네비 높이(64px) + 여유 */
+}
+
+.skills-section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  /* 🔥 기술스택 전체를 화면에서 살짝 위로 */
+  padding-top: 56px;
+  padding-bottom: 60px;
+
+  background: #f8fafc;
+
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 64px); /* 네비 높이만큼 제외 */
+  padding-top: 0;        
+}
+
+.skills-container {
+  max-width: 1700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ✅ 섹션 헤더 (기술 스택) */
+.skills-header {
+  text-align: center;
+}
+
+.skills-header h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 18px;   /* 🔥 제목 ↔ 설명 간격 줄임 */
+  color: #111;
+}
+
+.skills-header p {
+  color: #4b5563;
+  font-size: 16px;
+  margin: 0 0 32px;   /* 🔥 설명 ↔ 카드 간격 줄임 */
+}
+
+/* 카드 리스트 간격 */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+/* ✅ 프로젝트 카드 느낌: 얇은 테두리 + 그림자 제거 */
+.skill-category {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 26px 22px;
+
+  border: 1px solid #e5e7eb;
+  box-shadow: none;
+
+  /* 🔥 카드 안 텍스트 전부 왼쪽 정렬 */
+  text-align: left;
+}
+
+/* 헤더: 아이콘 + 카테고리명 */
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* ✅ 아이콘 색/느낌은 그대로 */
+.category-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  color: #ffffff;
+}
+
+/* ✅ Frontend Development 폰트 */
+.category-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+/* 구분선 */
+.category-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 10px 0 20px;
+}
+
+/* 스킬 리스트 */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+/* 스킬 아이템 */
+.skill-item {
+  padding: 4px 0;
+}
+
+/* 기술명 */
+.skill-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 8px;
+
+  /* 🔥 왼쪽 정렬 고정 */
+  text-align: left;
+}
+
+/* 설명 */
+.skill-description {
+  margin: 0;
+  padding-left: 18px;
+  list-style: disc;
+
+  /* 🔥 왼쪽 정렬 고정 */
+  text-align: left;
+}
+
+.skill-description li {
+  color: #374151;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .skills-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+}

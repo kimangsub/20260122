@@ -26,9 +26,10 @@ import MovieStar22 from '../assets/images/MovieStar22.jpg';
 export const ProjectsData = [
     {
         id: 1,
-        title: '첫 번째 프로젝트',
-        description: '프로젝트',
-        tech: "React, CSS",
+        title: 'MovieStar',
+        description: '팀 프로젝트',
+        tech: ['React', 'Java', 'SpringBoot', 'MySQL', 'AWS'],
+        period: '2025.12 - 2025.01',
         detail: {
             images: [
                 MovieStar0,
@@ -55,29 +56,44 @@ export const ProjectsData = [
                 MovieStar21,
                 MovieStar22,
             ],
-            content: "이 프로젝트의 설명"
+            content: 
+            `
+            MovieStar는 Open API를 활용하여 영화 정보를 제공하는 웹 애플리케이션입니다.
+            사용자는 장르별 영화 목록을 조회하고, 영화의 상세 정보를 확인할 수 있습니다.
+
+            [주요 기능]
+- 영화 장르별 목록 조회
+- 영화 상세 정보 페이지
+- Open API 연동 데이터 처리
+- REST API 서버 구현
+- AWS 배포 및 서버 운영
+
+느낀점
+            `
         }
     },
     {
         id: 2,
-        title: '두 번째 프로젝트',
-        description: '프로젝트',
-        tech: "React, CSS",
+        title: 'TripBoard',
+        description: '개인 프로젝트',
+        tech: ['React', 'JavaScript','CSS', 'Vite'],
+        period: '날짜 기재',
         detail: {
             images: [
-                '',
+                
             ],
             content: "이 프로젝트의 설명"
         }
     },
     {
         id: 3,
-        title: '세 번째 프로젝트',
-        description: '프로젝트',
-        tech: "React, CSS",
+        title: 'MovieStar',
+        description: '팀 프로젝트',
+        tech: ['React', 'JavaScript','CSS', 'Vite'],
+        period: '날짜 기재',
         detail: {
             images: [
-                '',
+                
             ],
             content: "이 프로젝트의 설명"
         }

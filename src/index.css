@@ -1,68 +1,252 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* =========================
+   🌙 DARK MODE (단일 배경톤 통일 + 모달까지 확실히)
+   - 배경색: 1개로 통일
+   - 카드/섹션/모달 모두 같은 톤
+   - 모달 경계감(그림자/테두리) 추가
+========================= */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+:root[data-theme="dark"] {
+  /* ✅ 딱 하나의 배경톤(검정+회색 섞인 단일 톤) */
+  --dm-one: #0d0e10;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  /* 텍스트/보더 */
+  --dm-text: #e5e7eb;
+  --dm-muted: #a3aab6;
+  --dm-border: rgba(255, 255, 255, 0.08);
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+/* ✅ 페이지 전체 배경/기본 글자 */
+:root[data-theme="dark"] body {
+  background: var(--dm-one) !important;
+  color: var(--dm-text) !important;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* ✅ 섹션 배경 전부 "단일 톤"으로 통일 */
+:root[data-theme="dark"] .projects,
+:root[data-theme="dark"] .skills-section,
+:root[data-theme="dark"] .education,
+:root[data-theme="dark"] .contact {
+  background-color: var(--dm-one) !important;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* ✅ 카드/박스도 전부 같은 톤으로(배경 통일) */
+:root[data-theme="dark"] .project-card,
+:root[data-theme="dark"] .skill-category,
+:root[data-theme="dark"] .education-card,
+:root[data-theme="dark"] .contact-card {
+  background: var(--dm-one) !important;
+  border-color: var(--dm-border) !important;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* ✅ 다크모드 네비 배경/글자 */
+:root[data-theme="dark"] .navbar {
+  background-color: var(--dm-one) !important;
+}
+
+:root[data-theme="dark"] .navbar-menu a {
+  color: var(--dm-text) !important;
+}
+
+/* =========================
+   ✅ 1) ProjectModal 흰색 유지 문제 "강제 해결"
+   - 오버레이: 어둡게
+   - 모달 박스: 단일 톤 + 테두리 + 그림자
+   - 모달 제목/설명 텍스트: 흰색/연한 회색
+========================= */
+
+/* ✅ 오버레이(배경) - 기존보다 안전하게 "modal"이 포함된 overlay만 */
+:root[data-theme="dark"] [class*="modal"][class*="overlay"],
+:root[data-theme="dark"] [class*="Modal"][class*="Overlay"],
+:root[data-theme="dark"] [class*="modalOverlay"],
+:root[data-theme="dark"] [class*="ModalOverlay"] {
+  background: rgba(0, 0, 0, 0.72) !important;
+}
+
+/* ✅ 모달 박스(흰색 박스 잡는 핵심) */
+:root[data-theme="dark"] [class*="modal"][class*="content"],
+:root[data-theme="dark"] [class*="Modal"][class*="Content"],
+:root[data-theme="dark"] [class*="modalContent"],
+:root[data-theme="dark"] [class*="ModalContent"],
+:root[data-theme="dark"] [class*="modal"][class*="container"],
+:root[data-theme="dark"] [class*="Modal"][class*="Container"],
+:root[data-theme="dark"] [class*="modalContainer"],
+:root[data-theme="dark"] [class*="ModalContainer"] {
+  background: var(--dm-one) !important;
+  color: var(--dm-text) !important;
+
+  /* ✅ 경계 느낌(테두리 + 그림자) */
+  border: 1px solid var(--dm-border) !important;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.65) !important;
+}
+
+/* ✅ 모달 제목/본문 텍스트 색 (프로젝트명/설명 흰색 요청 반영) */
+:root[data-theme="dark"] [class*="modal"] h1,
+:root[data-theme="dark"] [class*="modal"] h2,
+:root[data-theme="dark"] [class*="modal"] h3,
+:root[data-theme="dark"] [class*="Modal"] h1,
+:root[data-theme="dark"] [class*="Modal"] h2,
+:root[data-theme="dark"] [class*="Modal"] h3 {
+  color: var(--dm-text) !important;
+}
+
+:root[data-theme="dark"] [class*="modal"] p,
+:root[data-theme="dark"] [class*="Modal"] p {
+  color: var(--dm-text) !important;
+  opacity: 0.92;
+}
+
+/* ✅ 모달 닫기 버튼(X)도 흰색 */
+:root[data-theme="dark"] [class*="modal"] button,
+:root[data-theme="dark"] [class*="Modal"] button,
+:root[data-theme="dark"] [class*="close"],
+:root[data-theme="dark"] [class*="Close"] {
+  color: var(--dm-text) !important;
+}
+
+/* =========================
+   ✅ 2) Skills 텍스트 흰색 (요청한 항목만)
+   - 기술스택 텍스트
+   - Frontend Dev(카테고리명)
+   - skill name / description
+========================= */
+
+:root[data-theme="dark"] .skills-header h1,
+:root[data-theme="dark"] .skills-header p,
+:root[data-theme="dark"] .category-title,
+:root[data-theme="dark"] .skill-name,
+:root[data-theme="dark"] .skill-description li {
+  color: var(--dm-text) !important;
+}
+
+/* =========================
+   ✅ 3) Education 텍스트 흰색 (요청한 항목만)
+   - 교육과정 이름
+   - 주요학습내용(섹션 타이틀)
+========================= */
+
+:root[data-theme="dark"] .education-course,
+:root[data-theme="dark"] .education-section h4 {
+  color: var(--dm-text) !important;
+}
+
+/* (선택) 교육 설명/리스트도 어두운 배경에서 잘 보이게 */
+:root[data-theme="dark"] .education-desc,
+:root[data-theme="dark"] .education-section li,
+:root[data-theme="dark"] .education-period {
+  color: var(--dm-text) !important;
+  opacity: 0.92;
+}
+
+/* =========================
+   ✅ 4) Contact 텍스트 흰색
+========================= */
+
+:root[data-theme="dark"] .contact-title,
+:root[data-theme="dark"] .contact-desc {
+  color: var(--dm-text) !important;
+}
+
+/* =========================
+   ✅ 마지막 수정 2개 (Dark mode only)
+   1) ProjectModal 흰색 -> 다크 강제
+   2) 프로젝트 카드 hover 그림자 제거
+========================= */
+
+/* 1) 모달 창(박스) 색을 다크로 강제 (라이트모드 스타일 덮어쓰기) */
+:root[data-theme="dark"] .project-modal,
+:root[data-theme="dark"] .project-modal-content,
+:root[data-theme="dark"] .project-modal-container,
+:root[data-theme="dark"] .modal-content,
+:root[data-theme="dark"] .modal-container,
+:root[data-theme="dark"] [role="dialog"] {
+  background: var(--dm-one) !important;
+  color: var(--dm-text) !important;
+  border: 1px solid var(--dm-border) !important;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.65) !important;
+}
+
+/* 모달 안 텍스트도 흰색으로 */
+:root[data-theme="dark"] [role="dialog"] h1,
+:root[data-theme="dark"] [role="dialog"] h2,
+:root[data-theme="dark"] [role="dialog"] h3,
+:root[data-theme="dark"] [role="dialog"] p,
+:root[data-theme="dark"] [role="dialog"] li,
+:root[data-theme="dark"] [role="dialog"] span {
+  color: var(--dm-text) !important;
+}
+
+/* 2) 다크모드에서 프로젝트 카드 hover "그림자만" 제거 (기존 hover 이동/테두리는 유지) */
+:root[data-theme="dark"] .project-card:hover {
+  box-shadow: none !important;
+}
+
+/* =========================
+   ✅ Dark mode: ProjectModal 다크 적용 (너 클래스명 기준)
+========================= */
+
+/* 오버레이(배경) */
+:root[data-theme="dark"] .modal-overlay {
+  background: rgba(0, 0, 0, 0.72) !important;
+}
+
+/* 모달 박스(흰색 → 다크) + 경계감(그림자/테두리) */
+:root[data-theme="dark"] .modal {
+  background: var(--dm-one) !important;
+  color: var(--dm-text) !important;
+
+  border: 1px solid var(--dm-border) !important;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.65) !important;
+}
+
+/* 모달 안 텍스트 흰색 */
+:root[data-theme="dark"] .modal h2,
+:root[data-theme="dark"] .modal p {
+  color: var(--dm-text) !important;
+}
+
+/* 닫기 버튼도 흰색 */
+:root[data-theme="dark"] .modal-close {
+  color: var(--dm-text) !important;
+}
+
+/* =========================
+   ✅ Dark mode: 프로젝트 카드 hover 그림자만 제거
+========================= */
+:root[data-theme="dark"] .project-card:hover {
+  box-shadow: none !important;
+}
+
+/* =========================
+   ✅ Dark mode: 모달 안쪽 흰 여백 + 헤더(MovieStar)까지 전부 통일
+========================= */
+
+/* 모달 전체 래퍼 */
+:root[data-theme="dark"] .modal {
+  background: var(--dm-one) !important;
+}
+
+/* 모달 헤더 (MovieStar 있는 부분) */
+:root[data-theme="dark"] .modal-header {
+  background: var(--dm-one) !important;
+  border-bottom: 1px solid var(--dm-border) !important;
+}
+
+/* 모달 바디(내용 여백 흰 부분 제거) */
+:root[data-theme="dark"] .modal-body {
+  background: var(--dm-one) !important;
+}
+
+/* 혹시 이미지 영역이나 내부 박스가 따로 흰색이면 그것도 같이 */
+:root[data-theme="dark"] .modal-images,
+:root[data-theme="dark"] .modal-images img {
+  background: transparent !important;
+}
+
+/* MovieStar 제목 색 흰색 */
+:root[data-theme="dark"] .modal-header h2 {
+  color: var(--dm-text) !important;
+}
+
+html, body {
+  overflow-x: hidden;
 }

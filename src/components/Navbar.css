@@ -1,5 +1,5 @@
 .navbar {
-  position: fixed;        /* 🔥 상단 고정 */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -12,29 +12,61 @@
   padding: 0 40px;
   background-color: #ffffff;
 
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: none;
+
   z-index: 1000;
 }
-
-
 
 /* 메뉴 */
 .navbar-menu {
   display: flex;
   gap: 24px;
   list-style: none;
+
   margin-left: auto;
+  margin-right: 100px;
+
   padding: 0;
+
+  /* ✅ 핵심: 메뉴 아이템(텍스트/버튼) 수직 중앙 정렬 */
+  align-items: center;
 }
 
+/* 링크 */
 .navbar-menu a {
-  color: #111111 !important;   /* 🔥 최종 덮어쓰기 */
+  color: #111111 !important;
   text-decoration: none;
   font-size: 17px;
   font-weight: 500;
+
+  /* ✅ 라인 높이 통일(글자 떠보이는 현상 방지) */
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
 }
 
 .navbar-menu a:hover {
   color: #2563eb !important;
 }
 
+/* ✅ 다크모드 토글 버튼 */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  /* ✅ 글자랑 같은 기준선으로 맞추기 */
+  font-size: 18px;
+  line-height: 1;
+
+  /* ✅ 기본 버튼 padding 때문에 아래로 내려가는 거 방지 */
+  padding: 0;
+
+  /* ✅ 버튼도 링크처럼 중앙 정렬 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* ✅ 아이콘이 살짝 아래로 처지는 경우 미세 보정 */
+  transform: translateY(1px);
+}

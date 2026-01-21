@@ -1,0 +1,100 @@
+/* ===== Contact 섹션 ===== */
+.contact {
+  padding: 120px 20px;
+  padding-top: 235px; /* 🔥 215px → 235px : 진짜 조금 더 아래로 */
+
+  background-color: #ffffff;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  min-height: calc(100vh - 64px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* 네비 클릭 시 위치 보정 */
+#contact {
+  scroll-margin-top: 64px;
+}
+
+.contact-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin-top: 36px;      /* 🔥 28px → 36px */
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.contact-desc {
+  font-size: 15px;
+  color: #4b5563;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* 버튼 묶음 */
+.contact-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* 공통 버튼 스타일 */
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 28px;
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* GitHub 버튼 */
+.contact-btn.github {
+  background: #111111;
+  color: #ffffff;
+}
+
+.contact-btn.github:hover {
+  background: #000000;
+  transform: translateY(-2px);
+}
+
+/* Email 버튼 */
+.contact-btn.email {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.contact-btn.email:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 640px) {
+  .contact {
+    padding-top: 210px; /* 🔥 190px → 210px : 모바일도 같이 살짝 ↓ */
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .contact-btn {
+    width: 100%;
+  }
+}

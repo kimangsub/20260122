@@ -20,3 +20,10 @@
 .hero-btn:hover {
   background-color: #1e40af;
 }
+
+.hero h1 span {
+  color: #2563eb;
+  display: inline-block;
+  margin-top: 8px; /* 줄 간격 */
+}
+

@@ -1,0 +1,116 @@
+/* ===== 교육 섹션 ===== */
+.education {
+  padding: 120px 20px;
+
+  /* 🔥 핵심: 전체 섹션을 위로 살짝 */
+  padding-top: 120px; /* 기존 170px → 130px */
+
+  background-color: #ffffff;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* 네비 클릭 시 위치 보정 */
+#education {
+  scroll-margin-top: 64px;
+}
+
+.education-title {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 32px; /* 🔥 40px → 32px (타이틀 ↔ 카드 간격도 살짝 줄임) */
+}
+
+/* ===== 교육 카드 ===== */
+.education-card {
+  max-width: 980px;
+  margin: 0 auto;
+
+  background: #ffffff;
+  border-radius: 16px;
+
+  /* 🔥 카드 안쪽 위 여백도 살짝 줄여서 더 위로 올라온 느낌 */
+  padding: 30px 38px; /* 기존 34px 38px → 30px 38px */
+
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+  text-align: left;
+}
+
+/* 과정명 */
+.education-course {
+  font-size: 22px;
+  font-weight: 750;
+  margin: 0 0 8px;
+  color: #111;
+  letter-spacing: -0.2px;
+  text-align: left;
+}
+
+/* 기간 */
+.education-period {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 0 16px; /* 🔥 18px → 16px */
+  text-align: left;
+}
+
+/* 설명 */
+.education-desc {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #374151;
+  margin: 0 0 22px; /* 🔥 24px → 22px */
+  text-align: left;
+}
+
+/* 섹션 블록 */
+.education-section h4 {
+  font-size: 16px;
+  font-weight: 750;
+  margin: 0 0 12px;
+  color: #111;
+  text-align: left;
+}
+
+/* 리스트 */
+.education-section ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.education-section li {
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 768px) {
+  .education {
+    padding-top: 110px; /* 🔥 모바일에서도 같이 위로 */
+  }
+
+  .education-card {
+    padding: 24px 22px;
+    max-width: 92%;
+  }
+
+  .education-title {
+    font-size: 30px;
+  }
+
+  .education-course {
+    font-size: 20px;
+  }
+}
