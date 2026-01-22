@@ -1,4 +1,3 @@
-// src/components/Skills.jsx
 import React from 'react';
 import { Code, Server, Wrench } from 'lucide-react';
 import './Skills.css';
@@ -94,7 +93,6 @@ export default function Skills() {
   return (
     <section id="skills" className="skills-section">
       <div className="skills-container">
-        {/* ✅ 섹션 타이틀 (다시 추가) */}
         <div className="skills-header">
           <h1>기술 스택</h1>
         </div>

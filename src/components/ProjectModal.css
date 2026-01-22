@@ -13,9 +13,9 @@
 
 .modal {
   background: #fff;
-  width: 90%;            /* ⭐ 더 넓게 */
-  max-width: 1200px;     /* ⭐ 데스크탑에서 큼직 */
-  max-height: 90vh;      /* ⭐ 화면 거의 다 씀 */
+  width: 90%;         
+  max-width: 1200px;  
+  max-height: 90vh;    
   overflow-y: auto;
   border-radius: 16px;
   position: relative;
@@ -46,7 +46,7 @@
 }
 
 .modal-header h2 {
-  font-size: 28px;   /* 기존보다 큼 */
+  font-size: 28px;  
   font-weight: 700;
 }
 
@@ -71,7 +71,7 @@
 
 .modal-images img {
   width: 100%;
-  max-height: 700px;   /* ⭐ 크게 */
+  max-height: 700px;  
   object-fit: contain;
   background: #f5f5f5;
   padding: 16px;

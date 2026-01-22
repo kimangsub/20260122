@@ -1,7 +1,7 @@
 /* ===== Contact 섹션 ===== */
 .contact {
   padding: 120px 20px;
-  padding-top: 235px; /* 🔥 215px → 235px : 진짜 조금 더 아래로 */
+  padding-top: 235px;
 
   background-color: #ffffff;
 
@@ -25,7 +25,7 @@
 .contact-title {
   font-size: 36px;
   font-weight: 800;
-  margin-top: 36px;      /* 🔥 28px → 36px */
+  margin-top: 36px;
   margin-bottom: 20px;
   color: #111;
 }
@@ -37,7 +37,7 @@
   text-align: center;
 }
 
-/* 버튼 묶음 */
+/* 버튼 */
 .contact-buttons {
   display: flex;
   gap: 20px;
@@ -85,7 +85,7 @@
 /* ===== 반응형 ===== */
 @media (max-width: 640px) {
   .contact {
-    padding-top: 210px; /* 🔥 190px → 210px : 모바일도 같이 살짝 ↓ */
+    padding-top: 210px;
   }
 
   .contact-buttons {

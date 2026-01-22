@@ -1,8 +1,5 @@
-/* src/components/Skills.css */
-
-/* 🔥 네비 클릭 시 위치 보정 */
 #skills {
-  scroll-margin-top: 80px; /* 네비 높이(64px) + 여유 */
+  scroll-margin-top: 80px; 
 }
 
 .skills-section {
@@ -10,7 +7,6 @@
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
-  /* 🔥 기술스택 전체를 화면에서 살짝 위로 */
   padding-top: 56px;
   padding-bottom: 60px;
 
@@ -18,7 +14,7 @@
 
   display: flex;
   align-items: center;
-  min-height: calc(100vh - 64px); /* 네비 높이만큼 제외 */
+  min-height: calc(100vh - 64px); 
   padding-top: 0;        
 }
 
@@ -29,7 +25,7 @@
   padding: 0 40px;
 }
 
-/* ✅ 섹션 헤더 (기술 스택) */
+/* 섹션 헤더 (기술 스택) */
 .skills-header {
   text-align: center;
 }
@@ -37,14 +33,14 @@
 .skills-header h1 {
   font-size: 36px;
   font-weight: 800;
-  margin: 0 0 18px;   /* 🔥 제목 ↔ 설명 간격 줄임 */
+  margin: 0 0 18px; 
   color: #111;
 }
 
 .skills-header p {
   color: #4b5563;
   font-size: 16px;
-  margin: 0 0 32px;   /* 🔥 설명 ↔ 카드 간격 줄임 */
+  margin: 0 0 32px;  
 }
 
 /* 카드 리스트 간격 */
@@ -55,7 +51,6 @@
   align-items: start;
 }
 
-/* ✅ 프로젝트 카드 느낌: 얇은 테두리 + 그림자 제거 */
 .skill-category {
   background: #ffffff;
   border-radius: 12px;
@@ -64,7 +59,6 @@
   border: 1px solid #e5e7eb;
   box-shadow: none;
 
-  /* 🔥 카드 안 텍스트 전부 왼쪽 정렬 */
   text-align: left;
 }
 
@@ -76,7 +70,7 @@
   margin-bottom: 12px;
 }
 
-/* ✅ 아이콘 색/느낌은 그대로 */
+/* 아이콘 색/느낌은 그대로 */
 .category-icon {
   width: 40px;
   height: 40px;
@@ -90,7 +84,7 @@
   color: #ffffff;
 }
 
-/* ✅ Frontend Development 폰트 */
+/* Frontend Development 폰트 */
 .category-title {
   font-size: 20px;
   font-weight: 600;
@@ -124,7 +118,6 @@
   color: #111;
   margin: 0 0 8px;
 
-  /* 🔥 왼쪽 정렬 고정 */
   text-align: left;
 }
 
@@ -134,7 +127,6 @@
   padding-left: 18px;
   list-style: disc;
 
-  /* 🔥 왼쪽 정렬 고정 */
   text-align: left;
 }
 

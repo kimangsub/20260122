@@ -1,4 +1,3 @@
-// src/components/Contact.jsx
 import { useState } from "react";
 import "./Contact.css";
 
@@ -8,7 +7,6 @@ export default function Contact() {
 
   const [githubText, setGithubText] = useState("GitHub");
 
-  // ✅ Email: hover = 주소, leave = Email, click = 토글 고정
   const [emailText, setEmailText] = useState("Email");
   const [emailLocked, setEmailLocked] = useState(false);
 
@@ -45,7 +43,6 @@ export default function Contact() {
             if (!emailLocked) setEmailText("Email");
           }}
           onClick={() => {
-            // ✅ 토글: 고정 <-> 원복
             setEmailLocked((prev) => {
               const next = !prev;
               setEmailText(next ? emailAddress : "Email");

@@ -28,7 +28,6 @@
 
   padding: 0;
 
-  /* ✅ 핵심: 메뉴 아이템(텍스트/버튼) 수직 중앙 정렬 */
   align-items: center;
 }
 
@@ -39,7 +38,6 @@
   font-size: 17px;
   font-weight: 500;
 
-  /* ✅ 라인 높이 통일(글자 떠보이는 현상 방지) */
   line-height: 1;
   display: inline-flex;
   align-items: center;
@@ -49,24 +47,20 @@
   color: #2563eb !important;
 }
 
-/* ✅ 다크모드 토글 버튼 */
+/*  다크모드 버튼 */
 .theme-toggle {
   background: transparent;
   border: none;
   cursor: pointer;
 
-  /* ✅ 글자랑 같은 기준선으로 맞추기 */
   font-size: 18px;
   line-height: 1;
 
-  /* ✅ 기본 버튼 padding 때문에 아래로 내려가는 거 방지 */
   padding: 0;
 
-  /* ✅ 버튼도 링크처럼 중앙 정렬 */
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  /* ✅ 아이콘이 살짝 아래로 처지는 경우 미세 보정 */
   transform: translateY(1px);
 }

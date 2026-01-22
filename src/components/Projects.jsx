@@ -12,7 +12,6 @@ export default function Projects() {
 
       <div className="projects-list">
         {ProjectsData.map((project) => {
-          // ✅ tech가 배열이든 문자열이든 안전하게 배열로 변환
           const techArray = Array.isArray(project.tech)
             ? project.tech
             : (project.tech || "")

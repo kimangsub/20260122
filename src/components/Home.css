@@ -1,13 +1,13 @@
 .hero-btn {
   display: inline-block;
 
-  padding: 10px 24px;   /* ⬅️ 줄임 */
+  padding: 10px 24px;  
   margin-top: 20px;
 
   background-color: #2563eb;
   color: #ffffff;
 
-  font-size: 14px;      /* ⬅️ 살짝 작게 */
+  font-size: 14px;  
   font-weight: 600;
 
   border-radius: 5px;
@@ -24,6 +24,6 @@
 .hero h1 span {
   color: #2563eb;
   display: inline-block;
-  margin-top: 8px; /* 줄 간격 */
+  margin-top: 8px; 
 }
 

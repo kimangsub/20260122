@@ -1,11 +1,9 @@
-/* 기본 초기화 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 전체 기본 스타일 */
 body {
   font-family: 'Pretendard', Arial, sans-serif;
   background-color: #fff;
@@ -13,7 +11,6 @@ body {
   line-height: 1.6;
 }
 
-/* 공통 태그 */
 a {
   text-decoration: none;
   color: inherit;
@@ -32,18 +29,14 @@ html {
 }
 
 section {
-  min-height: 100vh;        /* 🔥 화면 한 장 */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  padding: 80px 40px;       /* 네비 공간 포함 */
+  padding: 80px 40px;
   box-sizing: border-box;
-
-  scroll-margin-top: 64px; /* navbar 높이 */
+  scroll-margin-top: 64px;
 }
-
-
 
 #home {
   align-items: center;

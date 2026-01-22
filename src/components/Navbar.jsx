@@ -24,7 +24,6 @@ export default function Navbar() {
         <li><a href="#education">교육</a></li>
         <li><a href="#contact">연락처</a></li>
 
-        {/* ✅ 다크모드 토글 버튼만 추가 */}
         <li>
           <button
             type="button"

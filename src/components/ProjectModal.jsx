@@ -7,7 +7,7 @@ export default function ProjectModal({ project, onClose }) {
         <div className="modal-overlay" onClick={onClose}>
             <div
                 className="modal"
-                onClick={(e) => e.stopPropagation()}  // ⭐ 이거 핵심
+                onClick={(e) => e.stopPropagation()} 
             >
                 <div className="modal-header">
                     <h2>{project.title}</h2>
