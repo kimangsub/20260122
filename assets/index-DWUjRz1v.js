@@ -28,7 +28,7 @@ Error generating stack: `+u.message+`
                 장르 목록과 장르별 영화 데이터를 각각 API로 받아와 상태로 관리하고 화면에 연결하는 흐름을 직접 구현하면서, 
                 React에서 데이터 흐름과 상태 관리가 얼마나 중요한지 느끼게 되었습니다.
                 팀 프로젝트를 진행하며 혼자 해결하기 어려운 문제를 팀원들과 공유하고 함께 고민하는 과정에서 협업과 소통의 중요성도 크게 느끼게 되었습니다.           
-                `}},{id:2,title:"TripBoard",description:"개인 프로젝트",tech:["React","JavaScript","CSS"],period:"2024.08 - 2024.09",detail:{images:[Ny,jy],content:`TripBoard는 Open API를 활용하여 여행 정보를 제공하는 웹 애플리케이션입니다.
+                `}},{id:2,title:"TripBoard",description:"개인 프로젝트",tech:["React","JavaScript","CSS"],period:"2025.08 - 2025.09",detail:{images:[Ny,jy],content:`TripBoard는 Open API를 활용하여 여행 정보를 제공하는 웹 애플리케이션입니다.
                 사용자가 도시 이름을 검색하면 해당 도시의 날씨, 환율, 주요 관광지 정보와 사진, 여행 체크리스트를 한눈에 확인할 수 있는 웹 애플리케이션입니다.
 
                 [주요 기능]
