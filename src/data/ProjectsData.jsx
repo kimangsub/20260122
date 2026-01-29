@@ -21,6 +21,8 @@ import MovieStar19 from '../assets/images/MovieStar19.jpg';
 import MovieStar20 from '../assets/images/MovieStar20.jpg';
 import MovieStar21 from '../assets/images/MovieStar21.jpg';
 import MovieStar22 from '../assets/images/MovieStar22.jpg';
+import TripBoard1 from '../assets/images/TripBoard1.png';
+import TripBoard2 from '../assets/images/TripBoard2.png';
 
 
 export const ProjectsData = [
@@ -69,7 +71,7 @@ export const ProjectsData = [
                 - AWS 배포 및 서버 운영
 
                 [담당 역할]
-                영화 메인 페이지(Home)에서영화 데이터 초기 로딩, 장르 목록 조회, 장르별 영화 연동 로직을 구현하고,
+                영화 메인 페이지(Home)에서 영화 데이터 초기 로딩, 장르 목록 조회, 장르별 영화 연동 로직을 구현하고,
                 검색 기능과 장르 네비게이션 클릭 시 영화 리스트가 동적으로 갱신되도록 상태 관리 로직을 담당하였습니다.
                 Axios 기반 API 모듈을 설계하여 영화 검색 및 카테고리별 조회 기능 등 데이터 연동 파트를 중심으로 개발에 참여하였습니다.
                 네이버 로그인 등 소셜 로그인 기능 구현에 참여하여 로그인 상태에 따른 UI 분기 처리와 사용자 인증 흐름 일부를 프론트엔드에서 담당하였습니다.
@@ -87,10 +89,11 @@ export const ProjectsData = [
         title: 'TripBoard',
         description: '개인 프로젝트',
         tech: ['React', 'JavaScript', 'CSS'],
-        period: '2024.08 - 2024.09',
+        period: '2025.08 - 2025.09',
         detail: {
             images: [
-
+                TripBoard1,
+                TripBoard2
             ],
             content: 
                 `TripBoard는 Open API를 활용하여 여행 정보를 제공하는 웹 애플리케이션입니다.
@@ -140,7 +143,7 @@ export const ProjectsData = [
 
                 [구현 내용]
                 React와 Vite 환경에서 개인 포트폴리오 SPA를 직접 설계하고, 전체 레이아웃 구성과 컴포넌트 분리를 통해 화면 구조를 구현하였습니다.
-                다크모드 상태를 전역으로 관리하여 모든 섹션에 일관된 테마가 적용되도록 처리하였습니다.
+                다크모드 / 라이트 모드 상태를 전역으로 관리하여 모든 섹션에 일관된 테마가 적용되도록 처리하였습니다.
                 또한 화면 크기에 따라 레이아웃이 자연스럽게 변하도록 반응형 스타일을 적용하였습니다.
 
                 [느낀점]
